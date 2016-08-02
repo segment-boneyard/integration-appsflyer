@@ -1,0 +1,33 @@
+{
+  "name": "integration-appsflyer",
+  "version": "0.0.0",
+  "integration-version": "2016-08-01",
+  "private": false,
+  "description": "Appsflyer server-side integration",
+  "author": "Segment <friends@segment.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/segment-integrations/integration-appsflyer"
+  },
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "dependencies": {
+    "fmt": "^1.0.0",
+    "segmentio-integration": "^4.0.0"
+  },
+  "devDependencies": {
+    "istanbul": "^0.3.0",
+    "jscs": "^1.6.2",
+    "merge-util": "^0.1.0",
+    "mocha": "*",
+    "segmentio-facade": "2.x",
+    "segmentio-integration-tester": "1.x",
+    "should": "~4.0.4",
+    "uid": "0.0.2"
+  },
+  "publishConfig": {
+    "registry": "https://segmentio.registry.nodejitsu.com"
+  }
+}
