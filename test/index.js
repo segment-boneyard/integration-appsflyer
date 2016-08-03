@@ -30,9 +30,11 @@ describe('AppsFlyer', function() {
     var msg;
 
     it('should be invalid if ios and no apple app id', function() {
+      delete settings.appleAppID;
+
       msg = {
         context: {
-          library: { name: 'ios' }
+          library: { name: 'analytics-ios' }
         },
         integrations: {
           AppsFlyer: {
@@ -40,7 +42,23 @@ describe('AppsFlyer', function() {
           }
         }
       };
-      delete settings.appleAppID;
+
+      test.invalid(msg, settings);
+    });
+
+    it('should be invalid if android and no android app id', function() {
+      delete settings.androidAppID;
+
+      msg = {
+        context: {
+          library: { name: 'analytics-android' }
+        },
+        integrations: {
+          AppsFlyer: {
+            appsFlyerId: 'xxx'
+          }
+        }
+      };
 
       test.invalid(msg, settings);
     });
@@ -48,16 +66,19 @@ describe('AppsFlyer', function() {
     it('should be invalid if you do not manually send appsflyer_id', function() {
       msg = {
         context: {
-          library: { name: 'ios' }
+          library: { name: 'analytics-ios' }
         }
       };
+
       test.invalid(msg, settings);
     });
 
     it('should be valid without apple app id if android', function() {
+      delete settings.appleAppID;
+
       msg = {
         context: {
-          library: { name: 'android' }
+          library: { name: 'analytics-android' }
         },
         integrations: {
           AppsFlyer: {
@@ -65,6 +86,24 @@ describe('AppsFlyer', function() {
           }
         }
       };
+
+      test.valid(msg, settings);
+    });
+
+    it('should be valid without android app id if apple', function() {
+      delete settings.androidAppID;
+
+      msg = {
+        context: {
+          library: { name: 'analytics-ios' }
+        },
+        integrations: {
+          AppsFlyer: {
+            appsFlyerId: 'xxx'
+          }
+        }
+      };
+
       test.valid(msg, settings);
     });
   });
