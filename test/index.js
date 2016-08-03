@@ -131,8 +131,8 @@ describe('AppsFlyer', function() {
         .end(done);
     });
 
-    it('should send revenue for ios', function(done) {
-      var json = test.fixture('track-event-revenue-ios');
+    it('should send props for ios', function(done) {
+      var json = test.fixture('track-event-props-ios');
 
       test
         .track(json.input)
@@ -142,8 +142,8 @@ describe('AppsFlyer', function() {
         .end(done);
     });
 
-    it('should send revenue for android', function(done) {
-      var json = test.fixture('track-event-revenue-android');
+    it('should send props for android', function(done) {
+      var json = test.fixture('track-event-props-android');
 
       test
         .track(json.input)
