@@ -11,6 +11,7 @@ describe('AppsFlyer', function() {
   beforeEach(function() {
     settings = {
       appleAppID: 'id822613531',
+      androidAppID: 'com.segment.analytics.sample',
       appsFlyerDevKey: 'pSX9JjSNkWUR8AJQQ7kQoE'
     };
     appsflyer = new AppsFlyer(settings);
@@ -91,8 +92,19 @@ describe('AppsFlyer', function() {
         .end(done);
     });
 
-    it('should send revenue', function(done) {
-      var json = test.fixture('track-event-revenue'); 
+    it('should send revenue for ios', function(done) {
+      var json = test.fixture('track-event-revenue-ios');
+
+      test
+        .track(json.input)
+        .request(1)
+        .sends(json.output)
+        .expects(200)
+        .end(done);
+    });
+
+    it('should send revenue for android', function(done) {
+      var json = test.fixture('track-event-revenue-android');
 
       test
         .track(json.input)

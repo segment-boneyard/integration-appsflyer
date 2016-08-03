@@ -1,15 +1,15 @@
 {
   "input": {
     "type": "track",
-    "event": "Application Installed",
+    "event": "all about the money",
     "userId": "user-id",
     "properties": {
       "revenue": 17.38
     },
-    "timestamp": "2015-11-09",
+    "timestamp": "2016-08-03",
     "context": {
       "ip": "10.0.0.2",
-      "app": { 
+      "app": {
         "namespace": "com.segment.TestApp",
         "version": "1.0.0",
         "build": "1.0.0"
@@ -22,7 +22,7 @@
       "network": { "carrier": "some-carrier" },
       "locale": "en-US",
       "library": {
-        "name": "analytics-ios"
+        "name": "analytics-android"
       },
       "referrer": {
         "type": "iad",
@@ -40,15 +40,15 @@
   },
   "output": {
     "appsflyer_id": "gucci-mane",
-    "idfa": "159358",
-    "bundle_id": "com.segment.TestApp",
-    "eventName": "Application Installed",
+    "advertising_id": "15938",
+    "eventName": "all about the money",
     "eventValue": {
-      "revenue": 17.38
+      "revenue": "17.38"
     },
     "eventCurrency": "USD",
     "ip": "10.0.0.2",
-    "eventTime": "2014-05-15 12:17:00.000",
-    "af_events_api": true
+    "eventTime": "2016-08-03 00:00:00.000",
+    "af_events_api": "true"
   }
 }
+

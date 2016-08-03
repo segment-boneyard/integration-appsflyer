@@ -1,10 +1,10 @@
 {
   "input": {
     "type": "track",
-    "event": "Application Installed",
+    "event": "the yolo is strong",
     "userId": "user-id",
     "properties": {},
-    "timestamp": "2015-11-09",
+    "timestamp": "2016-08-03",
     "context": {
       "ip": "10.0.0.2",
       "app": { 
@@ -39,12 +39,12 @@
   "output": {
     "appsflyer_id": "gucci-mane",
     "advertisingId": "159358",
-    "eventName": "Application Installed",
+    "eventName": "the yolo is strong",
     "eventValue": "",
     "eventCurrency": "USD",
     "ip": "10.0.0.2",
-    "eventTime": "2014-05-15 12:17:00.000",
-    "af_events_api": true
+    "eventTime": "2016-08-03 00:00:00.000",
+    "af_events_api": "true"
   }
 }
 
