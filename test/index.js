@@ -10,7 +10,7 @@ describe('AppsFlyer', function() {
 
   beforeEach(function() {
     settings = {
-      appleAppID: 'id822613531',
+      appleAppID: '822613531',
       androidAppID: 'com.segment.analytics.sample',
       appsFlyerDevKey: 'pSX9JjSNkWUR8AJQQ7kQoE'
     };
