@@ -1,13 +1,13 @@
 {
   "input": {
     "type": "track",
-    "event": "the yolo is strong",
+    "event": "season 2 of stranger things now",
     "userId": "user-id",
     "properties": {},
     "timestamp": "2016-08-03",
     "context": {
       "ip": "10.0.0.2",
-      "app": { 
+      "app": {
         "namespace": "com.segment.TestApp",
         "version": "1.0.0",
         "build": "1.0.0"
@@ -39,7 +39,7 @@
   "output": {
     "appsflyer_id": "gucci-mane",
     "advertisingId": "159358",
-    "eventName": "the yolo is strong",
+    "eventName": "season 2 of stranger things now",
     "eventValue": "",
     "eventCurrency": "USD",
     "ip": "10.0.0.2",

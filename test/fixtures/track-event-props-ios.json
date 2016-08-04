@@ -1,7 +1,7 @@
 {
   "input": {
     "type": "track",
-    "event": "all about the money",
+    "event": "rich AF",
     "userId": "user-id",
     "properties": {
       "revenue": 17.38
@@ -42,9 +42,9 @@
     "appsflyer_id": "gucci-mane",
     "idfa": "159358",
     "bundle_id": "com.segment.TestApp",
-    "eventName": "all about the money",
+    "eventName": "rich AF",
     "eventValue": {
-      "revenue": "17.38"
+      "af_revenue": "17.38"
     },
     "eventCurrency": "USD",
     "ip": "10.0.0.2",

@@ -1,13 +1,13 @@
 {
   "input": {
     "type": "track",
-    "event": "Application Installed",
+    "event": "season 2 of stranger things now please",
     "userId": "user-id",
     "properties": {},
     "timestamp": "2016-08-03",
     "context": {
       "ip": "10.0.0.2",
-      "app": { 
+      "app": {
         "namespace": "com.segment.TestApp",
         "version": "1.0.0",
         "build": "1.0.0"
@@ -40,7 +40,7 @@
     "appsflyer_id": "gucci-mane",
     "idfa": "159358",
     "bundle_id": "com.segment.TestApp",
-    "eventName": "Application Installed",
+    "eventName": "season 2 of stranger things now please",
     "eventValue": "",
     "eventCurrency": "USD",
     "ip": "10.0.0.2",

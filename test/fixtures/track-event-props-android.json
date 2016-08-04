@@ -1,7 +1,7 @@
 {
   "input": {
     "type": "track",
-    "event": "all about the money",
+    "event": "why did no one care about barbra",
     "userId": "user-id",
     "properties": {
       "revenue": 17.38
@@ -41,9 +41,9 @@
   "output": {
     "appsflyer_id": "gucci-mane",
     "advertising_id": "15938",
-    "eventName": "all about the money",
+    "eventName": "why did no one care about barbra",
     "eventValue": {
-      "revenue": "17.38"
+      "af_revenue": "17.38"
     },
     "eventCurrency": "USD",
     "ip": "10.0.0.2",
