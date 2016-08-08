@@ -15,6 +15,6 @@ dependencies:
 deployment:
   push:
     branch: master
-  commands:
-    - curl -sLu "$HTTP_AUTH:" $BUILD | /bin/bash
+    commands:
+     - curl -sLu "$HTTP_AUTH:" $BUILD | /bin/bash
 
