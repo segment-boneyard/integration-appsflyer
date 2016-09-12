@@ -38,7 +38,7 @@
   },
   "output": {
     "appsflyer_id": "gucci-mane",
-    "advertisingId": "159358",
+    "advertising_id": "159358",
     "eventName": "season 2 of stranger things now",
     "eventValue": "",
     "eventCurrency": "USD",
@@ -47,4 +47,3 @@
     "af_events_api": "true"
   }
 }
-
