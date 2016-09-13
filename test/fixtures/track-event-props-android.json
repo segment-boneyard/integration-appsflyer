@@ -40,15 +40,12 @@
   },
   "output": {
     "appsflyer_id": "gucci-mane",
-    "advertising_id": "15938",
+    "advertising_id": "159358",
     "eventName": "why did no one care about barbra",
-    "eventValue": {
-      "af_revenue": "17.38"
-    },
+    "eventValue": "{\"af_revenue\":\"17.38\"}",
     "eventCurrency": "USD",
     "ip": "10.0.0.2",
     "eventTime": "2016-08-03 00:00:00.000",
     "af_events_api": "true"
   }
 }
-

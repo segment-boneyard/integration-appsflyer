@@ -114,7 +114,7 @@ describe('AppsFlyer', function() {
 
       test
         .track(json.input)
-        .request(1)
+        .request(0)
         .sends(json.output)
         .expects(200)
         .end(done);
@@ -125,7 +125,7 @@ describe('AppsFlyer', function() {
 
       test
         .track(json.input)
-        .request(1)
+        .request(0)
         .sends(json.output)
         .expects(200)
         .end(done);
@@ -136,7 +136,7 @@ describe('AppsFlyer', function() {
 
       test
         .track(json.input)
-        .request(1)
+        .request(0)
         .sends(json.output)
         .expects(200)
         .end(done);
@@ -147,7 +147,7 @@ describe('AppsFlyer', function() {
 
       test
         .track(json.input)
-        .request(1)
+        .request(0)
         .sends(json.output)
         .expects(200)
         .end(done);
