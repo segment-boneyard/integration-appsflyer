@@ -15,7 +15,7 @@
   },
   "dependencies": {
     "fmt": "^1.0.0",
-    "segmentio-integration": "^4.0.0"
+    "segmentio-integration": "^5.0.1"
   },
   "devDependencies": {
     "istanbul": "^0.3.0",
