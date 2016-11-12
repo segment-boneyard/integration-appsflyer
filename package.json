@@ -1,6 +1,6 @@
 {
   "name": "integration-appsflyer",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "integration-version": "2016-08-08",
   "private": false,
   "description": "Appsflyer server-side integration",
