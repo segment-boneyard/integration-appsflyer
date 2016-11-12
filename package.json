@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "fmt": "^1.0.0",
+    "reject": "0.0.1",
     "segmentio-integration": "^5.0.1"
   },
   "devDependencies": {
