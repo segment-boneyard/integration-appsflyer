@@ -3,7 +3,10 @@
     "type": "track",
     "event": "season 2 of stranger things now",
     "userId": "user-id",
-    "properties": {},
+    "properties": {
+      "shouldNotMap": null,
+      "falsyValue": 0
+    },
     "timestamp": "2016-08-03",
     "context": {
       "ip": "10.0.0.2",
@@ -40,7 +43,7 @@
     "appsflyer_id": "gucci-mane",
     "advertising_id": "159358",
     "eventName": "season 2 of stranger things now",
-    "eventValue": "",
+    "eventValue": "{\"falsyValue\":\"0\"}",
     "eventCurrency": "USD",
     "ip": "10.0.0.2",
     "eventTime": "2016-08-03 00:00:00.000",

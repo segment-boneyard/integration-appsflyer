@@ -1,6 +1,6 @@
 {
   "name": "integration-appsflyer",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "integration-version": "2016-08-08",
   "private": false,
   "description": "Appsflyer server-side integration",
@@ -15,6 +15,7 @@
   },
   "dependencies": {
     "fmt": "^1.0.0",
+    "reject": "0.0.1",
     "segmentio-integration": "^5.0.1"
   },
   "devDependencies": {
