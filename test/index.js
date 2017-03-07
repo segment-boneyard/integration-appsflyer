@@ -1,7 +1,7 @@
-var Test = require('segmentio-integration-tester');
-var assert = require('assert');
-var should = require('should');
+'use strict';
+
 var AppsFlyer = require('..');
+var Test = require('segmentio-integration-tester');
 
 describe('AppsFlyer', function() {
   var settings;
