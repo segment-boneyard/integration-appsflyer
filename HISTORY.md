@@ -1,4 +1,14 @@
 
+1.1.2 / 2017-03-07
+==================
+
+  * Delint and remove integration-version field
+
+1.1.1 / 2017-03-07
+==================
+
+  * Start publishing package to npm
+
 1.1.0 / 2017-01-31
 ==================
 
