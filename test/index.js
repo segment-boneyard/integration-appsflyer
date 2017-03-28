@@ -34,7 +34,11 @@ describe('AppsFlyer', function() {
 
       msg = {
         context: {
-          library: { name: 'analytics-ios' }
+          device: {
+            manufacturer: 'some-brand',
+            type: 'ios',
+            advertisingId: '159358'
+          }
         },
         integrations: {
           AppsFlyer: {
@@ -51,7 +55,11 @@ describe('AppsFlyer', function() {
 
       msg = {
         context: {
-          library: { name: 'analytics-android' }
+          device: {
+            manufacturer: 'some-brand',
+            type: 'android',
+            advertisingId: '159358'
+          }
         },
         integrations: {
           AppsFlyer: {
@@ -66,10 +74,38 @@ describe('AppsFlyer', function() {
     it('should be invalid if you do not manually send appsflyer_id', function() {
       msg = {
         context: {
-          library: { name: 'analytics-ios' }
+          device: {
+            manufacturer: 'some-brand',
+            type: 'ios',
+            advertisingId: '159358'
+          }
         }
       };
 
+      test.invalid(msg, settings);
+    });
+
+    it('should be invalid if you do not send an advertisingId', function() {
+      msg = {
+        context: {
+          device: {
+            manufacturer: 'some-brand',
+            advertisingId: '159358'
+          }
+        }
+      };
+      test.invalid(msg, settings);
+    });
+
+    it('should be invalid if you do not send a device type', function() {
+      msg = {
+        context: {
+          device: {
+            manufacturer: 'some-brand',
+            type: 'ios'
+          }
+        }
+      };
       test.invalid(msg, settings);
     });
 
@@ -78,7 +114,11 @@ describe('AppsFlyer', function() {
 
       msg = {
         context: {
-          library: { name: 'analytics-android' }
+          device: {
+            manufacturer: 'some-brand',
+            type: 'android',
+            advertisingId: '159358'
+          }
         },
         integrations: {
           AppsFlyer: {
@@ -95,7 +135,11 @@ describe('AppsFlyer', function() {
 
       msg = {
         context: {
-          library: { name: 'analytics-ios' }
+          device: {
+            manufacturer: 'some-brand',
+            type: 'ios',
+            advertisingId: '159358'
+          }
         },
         integrations: {
           AppsFlyer: {
