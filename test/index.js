@@ -109,6 +109,18 @@ describe('AppsFlyer', function() {
       test.invalid(msg, settings);
     });
 
+    it('should be invalid if you do not send "ios" or "android" as device type values', function() {
+      msg = {
+        context: {
+          device: {
+            manufacturer: 'some-brand',
+            type: 'some_random_value'
+          }
+        }
+      };
+      test.invalid(msg, settings);
+    });
+
     it('should be valid without apple app id if android', function() {
       delete settings.appleAppID;
 
