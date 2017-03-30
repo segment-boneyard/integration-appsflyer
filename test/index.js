@@ -21,7 +21,7 @@ describe('AppsFlyer', function() {
   it('should have the correct settings', function() {
     test
       .name('AppsFlyer')
-      .channels(['mobile', 'client', 'server'])
+      .channels(['server'])
       .endpoint('https://api2.appsflyer.com/inappevent/')
       .ensure('settings.appsFlyerDevKey');
   });
