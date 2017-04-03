@@ -21,7 +21,7 @@ describe('AppsFlyer', function() {
   it('should have the correct settings', function() {
     test
       .name('AppsFlyer')
-      .channels(['mobile', 'client', 'server'])
+      .channels(['server'])
       .endpoint('https://api2.appsflyer.com/inappevent/')
       .ensure('settings.appsFlyerDevKey');
   });
@@ -34,7 +34,11 @@ describe('AppsFlyer', function() {
 
       msg = {
         context: {
-          library: { name: 'analytics-ios' }
+          device: {
+            manufacturer: 'some-brand',
+            type: 'ios',
+            advertisingId: '159358'
+          }
         },
         integrations: {
           AppsFlyer: {
@@ -51,7 +55,11 @@ describe('AppsFlyer', function() {
 
       msg = {
         context: {
-          library: { name: 'analytics-android' }
+          device: {
+            manufacturer: 'some-brand',
+            type: 'android',
+            advertisingId: '159358'
+          }
         },
         integrations: {
           AppsFlyer: {
@@ -66,10 +74,26 @@ describe('AppsFlyer', function() {
     it('should be invalid if you do not manually send appsflyer_id', function() {
       msg = {
         context: {
-          library: { name: 'analytics-ios' }
+          device: {
+            manufacturer: 'some-brand',
+            type: 'ios',
+            advertisingId: '159358'
+          }
         }
       };
 
+      test.invalid(msg, settings);
+    });
+
+    it('should be invalid if you do not send an advertisingId', function() {
+      msg = {
+        context: {
+          device: {
+            manufacturer: 'some-brand',
+            advertisingId: '159358'
+          }
+        }
+      };
       test.invalid(msg, settings);
     });
 
@@ -78,7 +102,11 @@ describe('AppsFlyer', function() {
 
       msg = {
         context: {
-          library: { name: 'analytics-android' }
+          device: {
+            manufacturer: 'some-brand',
+            type: 'android',
+            advertisingId: '159358'
+          }
         },
         integrations: {
           AppsFlyer: {
@@ -95,7 +123,11 @@ describe('AppsFlyer', function() {
 
       msg = {
         context: {
-          library: { name: 'analytics-ios' }
+          device: {
+            manufacturer: 'some-brand',
+            type: 'ios',
+            advertisingId: '159358'
+          }
         },
         integrations: {
           AppsFlyer: {
@@ -109,6 +141,17 @@ describe('AppsFlyer', function() {
   });
 
   describe('track', function() {
+    it('should default the device type to android if the event is from a server-side library or device.type is not explicitly defined', function(done) {
+      var json = test.fixture('track-event-server-side');
+
+      test
+        .track(json.input)
+        .request(0)
+        .sends(json.output)
+        .expects(200)
+        .end(done);
+    });
+
     it('should send a track event for ios', function(done) {
       var json = test.fixture('track-event-ios');
 

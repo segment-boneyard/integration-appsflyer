@@ -1,0 +1,36 @@
+{
+  "input": {
+    "context": {
+      "library": {
+        "name": "analytics-node",
+        "version": "2.0.2"
+      },
+      "device": {
+        "advertisingId": "159358"
+      }
+    },
+    "event": "Order Completed",
+    "properties": {},
+    "timestamp": "2016-08-03",
+    "type": "track",
+    "userId": "bill_brasky",
+    "writeKey": "YGgRfrtPZvc2EzW9yZ7eRVkdXGUIB6T6",
+    "sentAt": "2016-12-13T22:27:57.792Z",
+    "integrations": {
+      "AppsFlyer": {
+          "appsFlyerId": "gucci-mane"
+      }
+    },
+    "receivedAt": "2016-12-13T22:27:59.604Z",
+    "originalTimestamp": "2016-12-13T22:27:57.775Z"
+  },
+  "output": {
+    "appsflyer_id": "gucci-mane",
+    "advertising_id": "159358",
+    "eventName": "Order Completed",
+    "eventValue": "",
+    "eventCurrency": "USD",
+    "eventTime": "2016-08-03 00:00:00.000",
+    "af_events_api": "true"
+  }
+}

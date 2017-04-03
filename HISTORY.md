@@ -1,4 +1,9 @@
 
+1.2.0 / 2017-03-30
+==================
+
+  * Add better support for checking device type and handling requests from server-side libraries
+
 1.1.2 / 2017-03-07
 ==================
 

@@ -17,7 +17,7 @@
       },
       "device": {
         "manufacturer": "some-brand",
-        "type": "ios",
+        "type": "android",
         "advertisingId": "159358"
       },
       "network": { "carrier": "some-carrier" },
