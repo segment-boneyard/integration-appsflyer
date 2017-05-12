@@ -10,7 +10,6 @@
       }
     },
     "event": "Order Completed",
-    "properties": {},
     "timestamp": "2016-08-03",
     "type": "track",
     "userId": "bill_brasky",
