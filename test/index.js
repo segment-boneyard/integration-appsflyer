@@ -111,6 +111,24 @@ describe('AppsFlyer', function() {
       test.invalid(msg, settings);
     });
 
+    // TODO: remove this test once AppsFlyer updates their API to block events without
+    // an advertisingId.
+    it('should be valid without an advertisingId', function() {
+      msg = {
+        context: {
+          device: {
+            manufacturer: 'some-brand'
+          }
+        },
+        integrations: {
+          AppsFlyer: {
+            appsFlyerId: 'xxx'
+          }
+        }
+      };
+      test.valid(msg, settings);
+    })
+
     it('should be valid without apple app id if android', function() {
       delete settings.appleAppID;
 
