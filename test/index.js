@@ -85,17 +85,49 @@ describe('AppsFlyer', function() {
       test.invalid(msg, settings);
     });
 
-    it('should be invalid if you do not send an advertisingId', function() {
+    /**
+    * Temporarily skipping this test per: https://segment.zendesk.com/agent/tickets/73014.
+    * Despite what their documentation says, AppsFlyer's API will accept events wihtout an
+    * advertisingId / idfa property. This ensure block was causing issues for customers
+    * that have been using this integration without sending advertisingId previously.
+    * AppsFlyer will be working to migrate people away from doing this in the next couple of months.
+    *
+    * @ccnixon 05/10/2017
+    */
+
+    it.skip('should be invalid if you do not send an advertisingId', function() {
       msg = {
         context: {
           device: {
-            manufacturer: 'some-brand',
-            advertisingId: '159358'
+            manufacturer: 'some-brand'
+          }
+        },
+        integrations: {
+          AppsFlyer: {
+            appsFlyerId: 'xxx'
           }
         }
       };
       test.invalid(msg, settings);
     });
+
+    // TODO: remove this test once AppsFlyer updates their API to block events without
+    // an advertisingId.
+    it('should be valid without an advertisingId', function() {
+      msg = {
+        context: {
+          device: {
+            manufacturer: 'some-brand'
+          }
+        },
+        integrations: {
+          AppsFlyer: {
+            appsFlyerId: 'xxx'
+          }
+        }
+      };
+      test.valid(msg, settings);
+    })
 
     it('should be valid without apple app id if android', function() {
       delete settings.appleAppID;
@@ -143,7 +175,6 @@ describe('AppsFlyer', function() {
   describe('track', function() {
     it('should default the device type to android if the event is from a server-side library or device.type is not explicitly defined', function(done) {
       var json = test.fixture('track-event-server-side');
-
       test
         .track(json.input)
         .request(0)
