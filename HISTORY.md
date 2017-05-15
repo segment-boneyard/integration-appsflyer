@@ -1,7 +1,12 @@
 
-1.2.1 / 2017-04-17
+1.2.2 / 2017-04-17
 ==================
 
+* Removed ensure block checking for advertisingId. This is not (yet) a required parameter for AppsFlyer and is causing a droppage in events for customers.
+
+
+1.2.1 / 2017-04-17
+==================
 
 
 1.2.0 / 2017-03-30
